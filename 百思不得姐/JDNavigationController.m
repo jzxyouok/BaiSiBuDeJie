@@ -16,22 +16,46 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+/**
+ *  重写push方法，拦截push操作，替换系统自己的返回按钮：
+ *
+ *  @param viewController
+ *  @param animated       
+ */
+-(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    viewController.navigationItem.leftBarButtonItem = [self createCustomBackBarButtonItem];
+    [super pushViewController:viewController animated:animated];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+/**
+ *  自定义导航栏的返回按钮：
+ *
+ *  @return
+ */
+-(UIBarButtonItem *)createCustomBackBarButtonItem {
+    UIButton *backBtn = [[UIButton alloc] init];
+    [backBtn setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];
+    [backBtn setImage:[UIImage imageNamed:@"navigationButtonReturnClick"] forState:UIControlStateHighlighted];
+    [backBtn setTitle:@"返回" forState:UIControlStateNormal];
+    [backBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [backBtn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
+    [backBtn sizeToFit];
+    backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
+    [backBtn addTarget:self action:@selector(clickToReturnTheLastPage:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
+    return backItem;
 }
-*/
+
+/**
+ *  点击返回上一个页面：
+ *
+ *  @param sender
+ */
+-(void)clickToReturnTheLastPage:(UIButton *)sender {
+    JDFunc;
+    [self popViewControllerAnimated:YES];
+}
 
 @end

@@ -14,28 +14,17 @@
 #import "JDEssenceController.h"
 #import "JDNewController.h"
 
+#import "JDPublishController.h"
+
 @interface JDTabBarController () <JDCustomTabBarDelegate>
 
 @end
 
 @implementation JDTabBarController
 
--(instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        [self setupTabBarController];
-    }
-    return self;
-}
-
--(instancetype)initWithCoder:(NSCoder *)aDecoder {
-    if (self = [super initWithCoder:aDecoder]) {
-        [self setupTabBarController];
-    }
-    return self;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupTabBarController];
 }
 
 /**
@@ -79,8 +68,6 @@
     viewController.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImageName] getOriginalImage];
     // 文字样式：
     [viewController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateSelected];
-    // 背景图片：
-    [viewController.view setBackgroundColor:JDRandomColor];
     // 为每一个子控制器包装一个导航控制器：
     JDNavigationController *navVC = [[JDNavigationController alloc] initWithRootViewController:viewController];
     [self addChildViewController:navVC];
@@ -90,6 +77,10 @@
 
 -(void)customTabBar:(JDCustomTabBar *)customTabBar didClickPublishButton:(UIButton *)publishBtn {
     JDFunc;
+    // 跳转到撰写界面：
+    JDPublishController *publishVC = [[JDPublishController alloc] init];
+    JDNavigationController *navVC = [[JDNavigationController alloc] initWithRootViewController:publishVC];
+    [self presentViewController:navVC animated:YES completion:nil];
 }
 
 @end

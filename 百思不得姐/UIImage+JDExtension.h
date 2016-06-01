@@ -10,6 +10,11 @@
 
 @interface UIImage (JDExtension)
 
+/**
+ *  返回原始(非渲染)的图片：
+ *
+ *  @return 
+ */
 -(UIImage *)getOriginalImage;
 
 @end

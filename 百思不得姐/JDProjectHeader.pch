@@ -30,6 +30,7 @@
 // 分类和框架的头文件：
 #import "UIImage+JDExtension.h"
 #import "UIView+JDExtension.h"
+#import "UIBarButtonItem+JDExtension.h"
 
 // 其他：
 #define JDFunc JDLog(@"%s", __func__)
