@@ -32,8 +32,6 @@
     JDFunc;
     JDFriendsRecommentController *friendsRecommentVC = [[JDFriendsRecommentController alloc] init];
     [friendsRecommentVC.view setBackgroundColor:JDRandomColor];
-    // push的时候隐藏tabBar：
-    friendsRecommentVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:friendsRecommentVC animated:YES];
 }
 

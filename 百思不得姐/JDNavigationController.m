@@ -25,27 +25,13 @@
  *  @param animated       
  */
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    viewController.navigationItem.leftBarButtonItem = [self createCustomBackBarButtonItem];
+    // 默认第一层的导航控制器不添加返回按钮：
+    if (self.childViewControllers.count) {
+        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem createCustomBackBarButtonItemWithTarget:self andAction:@selector(clickToReturnTheLastPage:)];
+        // push时隐藏tabBar：
+        viewController.hidesBottomBarWhenPushed = YES;
+    }
     [super pushViewController:viewController animated:animated];
-}
-
-/**
- *  自定义导航栏的返回按钮：
- *
- *  @return
- */
--(UIBarButtonItem *)createCustomBackBarButtonItem {
-    UIButton *backBtn = [[UIButton alloc] init];
-    [backBtn setImage:[UIImage imageNamed:@"navigationButtonReturn"] forState:UIControlStateNormal];
-    [backBtn setImage:[UIImage imageNamed:@"navigationButtonReturnClick"] forState:UIControlStateHighlighted];
-    [backBtn setTitle:@"返回" forState:UIControlStateNormal];
-    [backBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [backBtn setTitleColor:[UIColor redColor] forState:UIControlStateHighlighted];
-    [backBtn sizeToFit];
-    backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
-    [backBtn addTarget:self action:@selector(clickToReturnTheLastPage:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
-    return backItem;
 }
 
 /**

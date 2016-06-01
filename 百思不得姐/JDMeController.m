@@ -36,7 +36,6 @@
     JDFunc;
     JDSettingController *settingVC = [[JDSettingController alloc] init];
     [settingVC.view setBackgroundColor:JDRandomColor];
-    settingVC.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:settingVC animated:YES];
 }
 

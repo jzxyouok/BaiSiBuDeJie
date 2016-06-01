@@ -22,4 +22,14 @@
  */
 +(UIBarButtonItem *)createBarButtonItemWithNormalImageName:(NSString *)normalImageName andHighlightedImageName:(NSString *)highlightedImageName andTarger:(id)target andAction:(SEL)action;
 
+/**
+ *  自定义导航栏的返回按钮：
+ *
+ *  @param target
+ *  @param action
+ *
+ *  @return 
+ */
++(UIBarButtonItem *)createCustomBackBarButtonItemWithTarget:(id)target andAction:(SEL)action;
+
 @end
