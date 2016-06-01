@@ -14,6 +14,12 @@
 		EA97915F1CFE6A9F004B4B26 /* JDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA97915E1CFE6A9F004B4B26 /* JDAppDelegate.m */; };
 		EA9791661CFE6AD8004B4B26 /* JDTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA9791651CFE6AD8004B4B26 /* JDTabBarController.m */; };
 		EAA27FA01CFE6D49002754F0 /* JDCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA27F9F1CFE6D49002754F0 /* JDCustomTabBar.m */; };
+		EAA27FA31CFE6F3C002754F0 /* JDNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA27FA21CFE6F3C002754F0 /* JDNavigationController.m */; };
+		EAA27FAA1CFE707D002754F0 /* JDEssenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA27FA91CFE707D002754F0 /* JDEssenceController.m */; };
+		EAA27FB91CFE71AD002754F0 /* JDNewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA27FB81CFE71AD002754F0 /* JDNewController.m */; };
+		EAA27FBC1CFE71B8002754F0 /* JDMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA27FBB1CFE71B8002754F0 /* JDMeController.m */; };
+		EAA27FBF1CFE71CF002754F0 /* JDFriendTrendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA27FBE1CFE71CF002754F0 /* JDFriendTrendsController.m */; };
+		EAA27FC31CFE7411002754F0 /* UIImage+JDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA27FC21CFE7411002754F0 /* UIImage+JDExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,18 @@
 		EA9791651CFE6AD8004B4B26 /* JDTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDTabBarController.m; sourceTree = "<group>"; };
 		EAA27F9E1CFE6D49002754F0 /* JDCustomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDCustomTabBar.h; sourceTree = "<group>"; };
 		EAA27F9F1CFE6D49002754F0 /* JDCustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDCustomTabBar.m; sourceTree = "<group>"; };
+		EAA27FA11CFE6F3C002754F0 /* JDNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDNavigationController.h; sourceTree = "<group>"; };
+		EAA27FA21CFE6F3C002754F0 /* JDNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDNavigationController.m; sourceTree = "<group>"; };
+		EAA27FA81CFE707D002754F0 /* JDEssenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDEssenceController.h; sourceTree = "<group>"; };
+		EAA27FA91CFE707D002754F0 /* JDEssenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDEssenceController.m; sourceTree = "<group>"; };
+		EAA27FB71CFE71AD002754F0 /* JDNewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDNewController.h; sourceTree = "<group>"; };
+		EAA27FB81CFE71AD002754F0 /* JDNewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDNewController.m; sourceTree = "<group>"; };
+		EAA27FBA1CFE71B8002754F0 /* JDMeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDMeController.h; sourceTree = "<group>"; };
+		EAA27FBB1CFE71B8002754F0 /* JDMeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDMeController.m; sourceTree = "<group>"; };
+		EAA27FBD1CFE71CF002754F0 /* JDFriendTrendsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JDFriendTrendsController.h; sourceTree = "<group>"; };
+		EAA27FBE1CFE71CF002754F0 /* JDFriendTrendsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDFriendTrendsController.m; sourceTree = "<group>"; };
+		EAA27FC11CFE7411002754F0 /* UIImage+JDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JDExtension.h"; sourceTree = "<group>"; };
+		EAA27FC21CFE7411002754F0 /* UIImage+JDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JDExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +156,11 @@
 		EA97915A1CFE6A36004B4B26 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				EAA27FC01CFE73EA002754F0 /* Extensions */,
+				EAA27FAD1CFE709E002754F0 /* FriendTrends */,
+				EAA27FAC1CFE709A002754F0 /* Me */,
+				EAA27FAB1CFE7094002754F0 /* New */,
+				EAA27FA41CFE704D002754F0 /* Essence */,
 				EA9791601CFE6ABA004B4B26 /* Main */,
 				EA97915B1CFE6A77004B4B26 /* Others */,
 			);
@@ -185,8 +208,151 @@
 			children = (
 				EA9791641CFE6AD8004B4B26 /* JDTabBarController.h */,
 				EA9791651CFE6AD8004B4B26 /* JDTabBarController.m */,
+				EAA27FA11CFE6F3C002754F0 /* JDNavigationController.h */,
+				EAA27FA21CFE6F3C002754F0 /* JDNavigationController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		EAA27FA41CFE704D002754F0 /* Essence */ = {
+			isa = PBXGroup;
+			children = (
+				EAA27FA71CFE7066002754F0 /* Model */,
+				EAA27FA61CFE705C002754F0 /* Controller */,
+				EAA27FA51CFE7055002754F0 /* View */,
+			);
+			name = Essence;
+			sourceTree = "<group>";
+		};
+		EAA27FA51CFE7055002754F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EAA27FA61CFE705C002754F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EAA27FA81CFE707D002754F0 /* JDEssenceController.h */,
+				EAA27FA91CFE707D002754F0 /* JDEssenceController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EAA27FA71CFE7066002754F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EAA27FAB1CFE7094002754F0 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				EAA27FB01CFE7177002754F0 /* Model */,
+				EAA27FAF1CFE7171002754F0 /* Controller */,
+				EAA27FAE1CFE70C2002754F0 /* View */,
+			);
+			name = New;
+			sourceTree = "<group>";
+		};
+		EAA27FAC1CFE709A002754F0 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				EAA27FB31CFE7189002754F0 /* Model */,
+				EAA27FB21CFE7183002754F0 /* Controller */,
+				EAA27FB11CFE717F002754F0 /* View */,
+			);
+			name = Me;
+			sourceTree = "<group>";
+		};
+		EAA27FAD1CFE709E002754F0 /* FriendTrends */ = {
+			isa = PBXGroup;
+			children = (
+				EAA27FB61CFE7195002754F0 /* Controller */,
+				EAA27FB51CFE7191002754F0 /* View */,
+				EAA27FB41CFE718D002754F0 /* Model */,
+			);
+			name = FriendTrends;
+			sourceTree = "<group>";
+		};
+		EAA27FAE1CFE70C2002754F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EAA27FAF1CFE7171002754F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EAA27FB71CFE71AD002754F0 /* JDNewController.h */,
+				EAA27FB81CFE71AD002754F0 /* JDNewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EAA27FB01CFE7177002754F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EAA27FB11CFE717F002754F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EAA27FB21CFE7183002754F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EAA27FBA1CFE71B8002754F0 /* JDMeController.h */,
+				EAA27FBB1CFE71B8002754F0 /* JDMeController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EAA27FB31CFE7189002754F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EAA27FB41CFE718D002754F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		EAA27FB51CFE7191002754F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		EAA27FB61CFE7195002754F0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EAA27FBD1CFE71CF002754F0 /* JDFriendTrendsController.h */,
+				EAA27FBE1CFE71CF002754F0 /* JDFriendTrendsController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		EAA27FC01CFE73EA002754F0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EAA27FC11CFE7411002754F0 /* UIImage+JDExtension.h */,
+				EAA27FC21CFE7411002754F0 /* UIImage+JDExtension.m */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,8 +486,14 @@
 			files = (
 				EAA27FA01CFE6D49002754F0 /* JDCustomTabBar.m in Sources */,
 				EA97915F1CFE6A9F004B4B26 /* JDAppDelegate.m in Sources */,
+				EAA27FA31CFE6F3C002754F0 /* JDNavigationController.m in Sources */,
 				EA9791661CFE6AD8004B4B26 /* JDTabBarController.m in Sources */,
+				EAA27FAA1CFE707D002754F0 /* JDEssenceController.m in Sources */,
 				EA9791291CFE6A0F004B4B26 /* main.m in Sources */,
+				EAA27FB91CFE71AD002754F0 /* JDNewController.m in Sources */,
+				EAA27FC31CFE7411002754F0 /* UIImage+JDExtension.m in Sources */,
+				EAA27FBC1CFE71B8002754F0 /* JDMeController.m in Sources */,
+				EAA27FBF1CFE71CF002754F0 /* JDFriendTrendsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

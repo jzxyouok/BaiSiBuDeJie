@@ -10,12 +10,25 @@
 
 @implementation JDCustomTabBar
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+-(instancetype)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        [self setupCustomTabBar];
+    }
+    return self;
 }
-*/
+
+-(instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        [self setupCustomTabBar];
+    }
+    return self;
+}
+
+/**
+ *  初始化：
+ */
+-(void)setupCustomTabBar {
+    
+}
 
 @end
