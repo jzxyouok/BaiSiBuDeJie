@@ -8,7 +8,7 @@
 
 #import "JDNavigationController.h"
 
-@interface JDNavigationController ()
+@interface JDNavigationController () <UIGestureRecognizerDelegate>
 
 @end
 
@@ -16,6 +16,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupNavigationController];
+}
+
+-(void)setupNavigationController {
+    // 右滑返回手势：
+    self.interactivePopGestureRecognizer.delegate = self;
+    // 导航控制器背景：
+    [self.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
 }
 
 /**
@@ -42,6 +50,14 @@
 -(void)clickToReturnTheLastPage:(UIButton *)sender {
     JDFunc;
     [self popViewControllerAnimated:YES];
+}
+
+#pragma mark - UIGestureRecognizerDelegate
+
+// 当出现手势操作时，会调用此代理方法来决定手势是否生效：
+-(BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer {
+#warning 如果在首页进行向右滑动操作，那么会出现无法push到其他控制器的BUG。所以此处一定要做判断：如果在第一个控制器，那么手势不生效。
+    return self.childViewControllers.count > 1;
 }
 
 @end

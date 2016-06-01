@@ -31,7 +31,6 @@
 -(void)clickToIntoFriendsRecommentPage:(UIButton *)sender {
     JDFunc;
     JDFriendsRecommentController *friendsRecommentVC = [[JDFriendsRecommentController alloc] init];
-    [friendsRecommentVC.view setBackgroundColor:JDRandomColor];
     [self.navigationController pushViewController:friendsRecommentVC animated:YES];
 }
 

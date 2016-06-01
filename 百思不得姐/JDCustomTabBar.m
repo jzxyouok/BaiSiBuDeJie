@@ -63,6 +63,8 @@
  */
 -(void)setupCustomTabBar {
     [self addPublishButton];
+    // 设置背景；
+    [self setBackgroundImage:[UIImage imageNamed:@"tabbar-light"]];
 }
 
 -(void)layoutSubviews {

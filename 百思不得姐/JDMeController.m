@@ -35,7 +35,6 @@
 -(void)clickToIntoSettingPage:(UIButton *)sender {
     JDFunc;
     JDSettingController *settingVC = [[JDSettingController alloc] init];
-    [settingVC.view setBackgroundColor:JDRandomColor];
     [self.navigationController pushViewController:settingVC animated:YES];
 }
 
