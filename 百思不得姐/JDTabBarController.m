@@ -14,7 +14,7 @@
 #import "JDEssenceController.h"
 #import "JDNewController.h"
 
-@interface JDTabBarController ()
+@interface JDTabBarController () <JDCustomTabBarDelegate>
 
 @end
 
@@ -45,25 +45,22 @@
     // 精华：
     JDEssenceController *essenceVC = [[JDEssenceController alloc] init];
     [self createChildViewControllerWithViewController:essenceVC andTitle:@"精华" andNormalImageName:@"tabBar_essence_icon" andSelectedImageName:@"tabBar_essence_click_icon"];
-    
     // 新帖：
     JDNewController *newVC = [[JDNewController alloc] init];
     [self createChildViewControllerWithViewController:newVC andTitle:@"新帖" andNormalImageName:@"tabBar_new_icon" andSelectedImageName:@"tabBar_new_click_icon"];
-    
     // 关注：
     JDFriendTrendsController *friendTrendsVC = [[JDFriendTrendsController alloc] init];
     [self createChildViewControllerWithViewController:friendTrendsVC andTitle:@"关注" andNormalImageName:@"tabBar_friendTrends_icon" andSelectedImageName:@"tabBar_friendTrends_click_icon"];
-    
     // 个人：
     JDMeController *meVC = [[JDMeController alloc] init];
     [self createChildViewControllerWithViewController:meVC andTitle:@"我" andNormalImageName:@"tabBar_me_icon" andSelectedImageName:@"tabBar_me_click_icon"];
-}
-
--(void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+    
     // 替换系统tabBar为自定义tabBar：
     JDCustomTabBar *customTabBar = [[JDCustomTabBar alloc] initWithFrame:self.tabBar.frame];
-    
+    [self.tabBar removeFromSuperview];
+    customTabBar.customTabBarDelegate = self;
+    [self setValue:customTabBar forKeyPath:@"tabBar"];
+    JDLog(@"%@", self.tabBar);
 }
 
 /**
@@ -82,9 +79,17 @@
     viewController.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImageName] getOriginalImage];
     // 文字样式：
     [viewController.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateSelected];
+    // 背景图片：
+    [viewController.view setBackgroundColor:JDRandomColor];
     // 为每一个子控制器包装一个导航控制器：
     JDNavigationController *navVC = [[JDNavigationController alloc] initWithRootViewController:viewController];
     [self addChildViewController:navVC];
+}
+
+#pragma mark - JDCustomTabBarDelegate
+
+-(void)customTabBar:(JDCustomTabBar *)customTabBar didClickPublishButton:(UIButton *)publishBtn {
+    JDFunc;
 }
 
 @end

@@ -20,6 +20,7 @@
 		EAA27FBC1CFE71B8002754F0 /* JDMeController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA27FBB1CFE71B8002754F0 /* JDMeController.m */; };
 		EAA27FBF1CFE71CF002754F0 /* JDFriendTrendsController.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA27FBE1CFE71CF002754F0 /* JDFriendTrendsController.m */; };
 		EAA27FC31CFE7411002754F0 /* UIImage+JDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA27FC21CFE7411002754F0 /* UIImage+JDExtension.m */; };
+		EAA27FC91CFE7D9D002754F0 /* UIView+JDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EAA27FC81CFE7D9D002754F0 /* UIView+JDExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		EAA27FBE1CFE71CF002754F0 /* JDFriendTrendsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JDFriendTrendsController.m; sourceTree = "<group>"; };
 		EAA27FC11CFE7411002754F0 /* UIImage+JDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JDExtension.h"; sourceTree = "<group>"; };
 		EAA27FC21CFE7411002754F0 /* UIImage+JDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JDExtension.m"; sourceTree = "<group>"; };
+		EAA27FC71CFE7D9D002754F0 /* UIView+JDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+JDExtension.h"; sourceTree = "<group>"; };
+		EAA27FC81CFE7D9D002754F0 /* UIView+JDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+JDExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -351,6 +354,8 @@
 			children = (
 				EAA27FC11CFE7411002754F0 /* UIImage+JDExtension.h */,
 				EAA27FC21CFE7411002754F0 /* UIImage+JDExtension.m */,
+				EAA27FC71CFE7D9D002754F0 /* UIView+JDExtension.h */,
+				EAA27FC81CFE7D9D002754F0 /* UIView+JDExtension.m */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -493,6 +498,7 @@
 				EAA27FB91CFE71AD002754F0 /* JDNewController.m in Sources */,
 				EAA27FC31CFE7411002754F0 /* UIImage+JDExtension.m in Sources */,
 				EAA27FBC1CFE71B8002754F0 /* JDMeController.m in Sources */,
+				EAA27FC91CFE7D9D002754F0 /* UIView+JDExtension.m in Sources */,
 				EAA27FBF1CFE71CF002754F0 /* JDFriendTrendsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
